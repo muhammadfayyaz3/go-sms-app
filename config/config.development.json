@@ -1,0 +1,6 @@
+{
+	"ACCOUNT_SID" : "_HERE_ACCOUNT_SID_",
+	"AUTH_TOKEN" : "_HERE_AUTH_TOKEN_",
+	"API_URL" : "https://api.twilio.com/2010-04-01/Accounts/_HERE_ACCOUNT_SID_/Messages.json",
+	"FROM_NUMBER" : "_FROM_NUMBER_"
+}
