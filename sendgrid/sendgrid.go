@@ -39,9 +39,6 @@ func SendEmail(e EMAIL) {
 		fmt.Println(err)
 	}
 
-	fmt.Printf("%+v\n", config)
-	os.Exit(0)
-
 	from := mail.NewEmail(e.FromName, e.From)
 	subject := e.Subject
 	to := mail.NewEmail(e.ToName, e.To)
