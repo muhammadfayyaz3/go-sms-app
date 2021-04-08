@@ -10,6 +10,7 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/joho/godotenv"
 	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
@@ -59,7 +60,8 @@ func SendEmail(e EMAIL) {
 
 //Getting Environment config file
 func getConfigFile() string {
-	env := os.Getenv("ENV")
+	godotenv.Load()
+	env := os.Getenv("APP_ENV")
 	if len(env) == 0 {
 		env = "development"
 	}

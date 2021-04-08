@@ -11,6 +11,8 @@ import (
 	"path/filepath"
 	"runtime"
 	"strings"
+
+	"github.com/joho/godotenv"
 )
 
 type Config struct {
@@ -73,7 +75,8 @@ func SendSMS(s SMS) string {
 
 //Getting Environment config file
 func getConfigFile() string {
-	env := os.Getenv("ENV")
+	godotenv.Load()
+	env := os.Getenv("APP_ENV")
 	if len(env) == 0 {
 		env = "development"
 	}

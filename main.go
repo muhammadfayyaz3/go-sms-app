@@ -9,7 +9,7 @@ import (
 func init() {
 	//setting SMS env variables
 	os.Setenv("TO", "+923110030006")
-	os.Setenv("BODY", "This is my test sms body")
+	os.Setenv("BODY", "This is sms sample body")
 
 	//setting EMAIL env variables
 	os.Setenv("EMAIL_FROM_NAME", "From Sample Name")
@@ -21,8 +21,8 @@ func init() {
 }
 
 func main() {
-	//sendSMS()
-	sendEmail()
+	sendSMS()
+	//sendEmail()
 }
 
 func sendSMS() {
